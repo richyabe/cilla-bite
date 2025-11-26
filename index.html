@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilla Bites - Premium Cakes & Pastries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cake-candles"></i>
+                <span>Cilla Bites</span>
+            </div>
+            <nav class="navbar">
+                <div class="mobile-menu-toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#packages">Special Packages</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-baking-bread-3371-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="bounce-in">Where Premium Taste Meets Exceptional Presentation</h1>
+            <p class="fade-in">We craft delicious cakes, pastries, and small chops that turn every moment into a celebration.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn">View Menu</a>
+                <a href="#contact" class="btn secondary">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="slide-in-left">Cilla Bites is a leading cakes and pastry brand dedicated to delivering unforgettable flavors and elegant treats. Our passion for excellence drives us to create baked goods and snacks that stand out in taste, quality, and presentation.</p>
+                    <p class="slide-in-left">For years, we've served families, students, organizations, and event planners with premium cakes, pastries, and ready-to-fry snacks — made with love, hygienically prepared, and always fresh.</p>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Our Mission</h3>
+                    <p class="slide-in-left">To bring joy to every customer through delicious, well-crafted baked treats and snacks.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/600x400?text=Aunty+Priscilla" alt="Aunty Priscilla" class="slide-in-right">
+                </div>
+            </div>
+            <div class="mission-values">
+                <div class="value-card slide-in-left">
+                    <i class="fas fa-star"></i>
+                    <h3>Quality</h3>
+                    <p>We use only the finest ingredients to ensure exceptional taste and freshness in every bite.</p>
+                </div>
+                <div class="value-card slide-in-right">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Creativity</h3>
+                    <p>Our designs are as unique as your special occasions, crafted with artistic flair.</p>
+                </div>
+                <div class="value-card slide-in-left">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Freshness</h3>
+                    <p>Every item is freshly made daily to guarantee the best possible flavor.</p>
+                </div>
+                <div class="value-card slide-in-right">
+                    <i class="fas fa-heart"></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your happiness is our priority – we go above and beyond to exceed expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-tabs">
+                <div class="menu-tab active" data-category="all">All Items</div>
+                <div class="menu-tab" data-category="cakes">Cakes</div>
+                <div class="menu-tab" data-category="pastries">Pastries</div>
+                <div class="menu-tab" data-category="small-chops">Small Chops</div>
+                <div class="menu-tab" data-category="ready-to-fry">Ready-to-Fry</div>
+            </div>
+            <div class="menu-grid">
+                <!-- Cake Items -->
+                <div class="menu-item" data-category="cakes">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Birthday+Cake" alt="Birthday Cake">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Birthday Cake</span>
+                            <span class="menu-price">₦15,000</span>
+                        </div>
+                        <p class="menu-description">Perfect for birthdays, inductions, convocation, weddings & more. Beautifully decorated, moist & delicious.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="cakes">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Mini+Foil+Cake" alt="Mini Foil Cake">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Mini Foil Cake</span>
+                            <span class="menu-price">₦1,500</span>
+                        </div>
+                        <p class="menu-description">Individual portion cakes available in various flavors including red velvet and vanilla.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="cakes">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Bento+Cake" alt="Bento Cake">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Bento Cake</span>
+                            <span class="menu-price">₦12,000</span>
+                        </div>
+                        <p class="menu-description">Any flavour of your choice. Perfect for individual servings or small gatherings.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pastries -->
+                <div class="menu-item" data-category="pastries">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Meat+Pie" alt="Meat Pie">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Meat Pie</span>
+                            <span class="menu-price">₦1,000</span>
+                        </div>
+                        <p class="menu-description">Flaky pastry filled with savory meat filling, perfect for any occasion.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="pastries">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Doughnut" alt="Doughnut">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Doughnut</span>
+                            <span class="menu-price">₦500</span>
+                        </div>
+                        <p class="menu-description">Soft, flavorful, and prepared with premium ingredients. Jam filled options available.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Small Chops -->
+                <div class="menu-item" data-category="small-chops">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Small+Chops" alt="Small Chops">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Small Chops Package</span>
+                            <span class="menu-price">₦2,500</span>
+                        </div>
+                        <p class="menu-description">Perfect for birthdays, weddings, corporate events, and picnics. Includes samosas, spring rolls, puff puff, and peppered beef.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="small-chops">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Food+Tray" alt="Food Tray">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Food Tray</span>
+                            <span class="menu-price">₦25,000</span>
+                        </div>
+                        <p class="menu-description">Complete meal tray with jollof rice, fried rice, chicken, and sides. Perfect for events and gatherings.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Ready-to-Fry -->
+                <div class="menu-item" data-category="ready-to-fry">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Ready+to+Fry" alt="Ready to Fry">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Ready-to-Fry Samosas</span>
+                            <span class="menu-price">₦3,000</span>
+                        </div>
+                        <p class="menu-description">Convenient packs of uncooked samosas ready for frying at your convenience. Great for parties and events.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="ready-to-fry">
+                    <div class="menu-image">
+                        <img src="https://via.placeholder.com/400x300?text=Chinchin" alt="Chinchin">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-title">
+                            <span>Chinchin Snacks</span>
+                            <span class="menu-price">₦2,500</span>
+                        </div>
+                        <p class="menu-description">Crunchy, bite-sized snacks available in different sizes for parties or personal enjoyment.</p>
+                        <button class="add-to-cart">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Packages Section -->
+    <section id="packages" class="special-packages">
+        <div class="container">
+            <h2 class="section-title">Special Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3 class="package-title">Induction & Convocation Package</h3>
+                    <div class="package-price">₦50,000</div>
+                    <p>Complete pastry and small chop combos perfect for students celebrating graduation.</p>
+                    <ul class="package-list">
+                        <li><i class="fas fa-check"></i> Cakes</li>
+                        <li><i class="fas fa-check"></i> Doughnuts</li>
+                        <li><i class="fas fa-check"></i> Meatpie</li>
+                        <li><i class="fas fa-check"></i> Small chops trays</li>
+                        <li><i class="fas fa-check"></i> Custom packages</li>
+                    </ul>
+                    <button class="add-to-cart">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                
+                <div class="package-card">
+                    <h3 class="package-title">Birthday Party Package</h3>
+                    <div class="package-price">₦35,000</div>
+                    <p>Everything you need for a memorable birthday celebration.</p>
+                    <ul class="package-list">
+                        <li><i class="fas fa-check"></i> Birthday Cake</li>
+                        <li><i class="fas fa-check"></i> Mini Cakes</li>
+                        <li><i class="fas fa-check"></i> Small Chops</li>
+                        <li><i class="fas fa-check"></i> Drinks</li>
+                        <li><i class="fas fa-check"></i> Decorations</li>
+                    </ul>
+                    <button class="add-to-cart">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                
+                <div class="package-card">
+                    <h3 class="package-title">Corporate Event Package</h3>
+                    <div class="package-price">₦75,000</div>
+                    <p>Professional catering for business meetings, conferences, and corporate events.</p>
+                    <ul class="package-list">
+                        <li><i class="fas fa-check"></i> Assorted Cakes</li>
+                        <li><i class="fas fa-check"></i> Savory Pastries</li>
+                        <li><i class="fas fa-check"></i> Small Chops</li>
+                        <li><i class="fas fa-check"></i> Beverages</li>
+                        <li><i class="fas fa-check"></i> Professional Service</li>
+                    </ul>
+                    <button class="add-to-cart">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Birthday+Cake" alt="Birthday Cake">
+                    <div class="gallery-caption">Happy Birthday Cake</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Meat+Pies" alt="Meat Pies">
+                    <div class="gallery-caption">Gillabites Meat Pies</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Mini+Foil+Cakes" alt="Mini Foil Cakes">
+                    <div class="gallery-caption">Mini Foil Cakes</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Ready+to+Fry" alt="Ready to Fry Samosas">
+                    <div class="gallery-caption">Ready to Fry Samosas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Chinchin" alt="Chinchin Snacks">
+                    <div class="gallery-caption">Chinchin Snacks</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Small+Chops" alt="Small Chops Party Pack">
+                    <div class="gallery-caption">Small Chops Party Pack</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Bulk+Donuts" alt="Bulk Donut Order">
+                    <div class="gallery-caption">Bulk Donut Order</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Birthday+Treat+Box" alt="Birthday Treat Box">
+                    <div class="gallery-caption">Birthday Treat Box</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-quote">
+                        "The birthday cake was absolutely stunning and tasted even better! Everyone at the party loved it."
+                    </div>
+                    <div class="testimonial-author">- Adebayo O.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        "Their small chops made our event perfect. 10/10! Fast delivery and great flavor."
+                    </div>
+                    <div class="testimonial-author">- Chioma N.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        "Cilla Bites has become my go-to for all my catering needs. Their attention to detail is unmatched."
+                    </div>
+                    <div class="testimonial-author">- David K.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section class="order-section">
+        <div class="container">
+            <h2 class="section-title">How to Order</h2>
+            <div class="order-steps">
+                <div class="order-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Choose Your Items</h3>
+                    <p>Browse our menu and select the items you want to order.</p>
+                </div>
+                <div class="order-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Add to Cart</h3>
+                    <p>Click "Add to Cart" for each item you'd like to purchase.</p>
+                </div>
+                <div class="order-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Checkout</h3>
+                    <p>Review your order and proceed to checkout.</p>
+                </div>
+                <div class="order-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Place Order</h3>
+                    <p>Submit your order and we'll contact you for delivery details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-phone"></i> <strong>Phone:</strong> 08054120378</li>
+                        <li><i class="fas fa-phone"></i> <strong>WhatsApp:</strong> 08108017596</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> cillabitecakesandpastries@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Asherifa, Onitsha, Anambra State</li>
+                        <li><i class="fas fa-clock"></i> <strong>Hours:</strong> 8:00 AM - 9:00 PM Daily</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>Select Product</option>
+                                <option>Birthday Cake</option>
+                                <option>Meat Pie</option>
+                                <option>Mini Foil Cake</option>
+                                <option>Ready to Fry Samosas</option>
+                                <option>Chinchin</option>
+                                <option>Small Chops Party Pack</option>
+                                <option>Bulk Donut Order</option>
+                                <option>Birthday Treat Box</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message/Order Details" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Cilla Bites</h3>
+                    <p>Premium cakes, pastries, and small chops for every occasion. Made with love and delivered with care.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#packages">Special Packages</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Asherifa, Onitsha, Anambra State</li>
+                        <li><i class="fas fa-phone"></i> 08054120378</li>
+                        <li><i class="fas fa-envelope"></i> cillabitecakesandpastries@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> 8:00 AM - 9:00 PM Daily</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Cilla Bites. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+                <p class="empty-cart-message">Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <div class="cart-total-row">
+                    <span class="cart-total-label">Total:</span>
+                    <span class="cart-total-value">₦0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
