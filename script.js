@@ -21,25 +21,47 @@ const navMenu = document.querySelector('.nav-menu');
 // Cart functionality
 let cart = [];
 
-// Add to cart function
+// Add to cart function - works for both menu items and special packages
 addToCartButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        const item = e.target.closest('.menu-item');
-        const title = item.querySelector('.menu-title span:first-child').textContent;
-        const price = item.querySelector('.menu-price').textContent;
-        const image = item.querySelector('img').src;
+        const item = e.target.closest('.menu-item, .package-card');
         
-        // Add to cart animation
-        button.classList.add('added');
-        setTimeout(() => button.classList.remove('added'), 500);
+        // For menu items
+        if (item.classList.contains('menu-item')) {
+            const title = item.querySelector('.menu-title span:first-child').textContent;
+            const price = item.querySelector('.menu-price').textContent;
+            const image = item.querySelector('img').src;
+            
+            // Add to cart animation
+            button.classList.add('added');
+            setTimeout(() => button.classList.remove('added'), 500);
+            
+            // Add item to cart
+            cart.push({
+                title: title,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+        }
         
-        // Add item to cart
-        cart.push({
-            title: title,
-            price: price,
-            image: image,
-            quantity: 1
-        });
+        // For special packages
+        else if (item.classList.contains('package-card')) {
+            const title = item.querySelector('.package-title').textContent;
+            const price = item.querySelector('.package-price').textContent;
+            
+            // Add to cart animation
+            button.classList.add('added');
+            setTimeout(() => button.classList.remove('added'), 500);
+            
+            // Add item to cart
+            cart.push({
+                title: title,
+                price: price,
+                image: '', // Default image for packages
+                quantity: 1
+            });
+        }
         
         updateCart();
     });
@@ -156,7 +178,7 @@ checkoutBtn.addEventListener('click', () => {
     const encodedMessage = encodeURIComponent(orderMessage);
     
     // Redirect to WhatsApp
-    window.open(`https://wa.me/2348045120378?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/2348054120378?text=${encodedMessage}`, '_blank');
     
     // Close cart and reset
     cartModal.style.display = 'none';
@@ -238,15 +260,31 @@ orderForm.addEventListener('submit', (e) => {
 
 // Mobile menu toggle
 mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
         navMenu.classList.remove('active');
     }
 });
 
 // Initialize cart
 updateCart();
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
