@@ -250,3 +250,85 @@ document.addEventListener('click', (e) => {
 
 // Initialize cart
 updateCart();
+
+// Particle Background Effect
+function createParticles() {
+    const container = document.getElementById('particles');
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random size
+        const size = Math.random() * 10 + 5;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random position
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        
+        // Random animation duration and delay
+        const duration = Math.random() * 10 + 5;
+        const delay = Math.random() * 5;
+        particle.style.animation = `float ${duration}s linear infinite ${delay}s`;
+        
+        // Random color variation
+        const colors = ['#e63946', '#f1faee', '#457b9d', '#1d3557', '#a8dadc'];
+        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+        
+        container.appendChild(particle);
+    }
+}
+
+// Sparkle Effect
+function createSparkles() {
+    const container = document.getElementById('sparkles');
+    const sparkleCount = 20;
+    
+    for (let i = 0; i < sparkleCount; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        
+        // Random position
+        sparkle.style.left = `${Math.random() * 100}%`;
+        sparkle.style.top = `${Math.random() * 100}%`;
+        
+        // Random animation delay
+        const delay = Math.random() * 3;
+        sparkle.style.animationDelay = `${delay}s`;
+        
+        // Random color
+        const colors = ['#e63946', '#f1faee', '#457b9d', '#1d3557', '#a8dadc', '#ffd166', '#06d6a0'];
+        sparkle.style.background = colors[Math.floor(Math.random() * colors.length)];
+        
+        container.appendChild(sparkle);
+    }
+}
+
+// Initialize particle effects when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    createParticles();
+    createSparkles();
+});
+
+// Enhanced scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scale-in');
+            entry.target.style.animationDelay = '0.1s';
+        }
+    });
+}, observerOptions);
+
+// Observe elements for scroll animations
+document.querySelectorAll('.menu-item, .package-card, .value-card, .gallery-item, .order-step').forEach(el => {
+    observer.observe(el);
+});
